@@ -306,11 +306,12 @@ const initAIAssistant = () => {
     
     // Dialog Database
     const responses = {
-        greeting: "Hi there! I'm Tanuj's AI Twin. Ask me anything about his projects, skills, backend experience, or availability! How can I help you today?",
-        skills: "Tanuj specializes in building agentic systems. His tech stack includes:\n\n• AI & Agents: LangChain, LangGraph, CrewAI, RAG, LangSmith, Prompt Engineering, MCP\n• Backend: FastAPI, Django, Python, REST APIs\n• Machine Learning: PyTorch, Scikit-learn, Pandas, NumPy\n• DevOps & DBs: Docker, Redis, Kubernetes, MongoDB, MySQL, Vector DBs",
-        projects: "Here are some of Tanuj's featured projects:\n\n1. AI Research Agent: A LangGraph multi-agent system that plans, searches, critiques, and writes research papers.\n2.  WhatsApp Lead Qualifier: A FastAPI automation qualified leads and logs customer parameters.\n3. RAG QA System: Documents parser and question-answering with vector retrieval.\n4. Semantic Recommendation: Intent mapping recommender system.",
-        availability: "Tanuj is currently a third-year CS student and is actively looking for:\n\n• AI Engineering Internships (Fall 2026/Winter 2027)\n• Freelance Projects (AI Agent design, automation pipelines, APIs)\n• Collaboration on open-source AI projects.\n\n📧 worktanujrajput@gmail.com",
-        default: "That's an interesting question! While I'm just a twin simulator, Tanuj can answer that in detail. You can shoot him an email at worktanujrajput@gmail.com or connect on LinkedIn!"
+        greeting: "Hi there! I'm Tanuj's AI Twin. Ask me anything about his experience, projects, skills, backend work, or availability! How can I help you today?",
+        skills: "Tanuj specializes in building agentic systems. His tech stack includes:\n\n• **AI & Agents**: LangChain, LangGraph, CrewAI, RAG, LangSmith, Prompt Engineering, MCP\n• **Backend**: FastAPI, Django, Python, REST APIs\n• **Machine Learning**: PyTorch, Scikit-learn, Pandas, NumPy\n• **DevOps & DBs**: Docker, Redis, Kubernetes, MongoDB, MySQL, Vector DBs",
+        projects: "Here are some of Tanuj's featured projects:\n\n1. **AI Research Agent**: A LangGraph multi-agent system that plans, searches, critiques, and writes research papers.\n2. **WhatsApp Lead Qualifier**: A FastAPI automation qualifying leads and logs customer parameters.\n3. **RAG QA System**: Documents parser and question-answering with vector retrieval.\n4. **Semantic Recommendation**: Intent mapping recommender system.",
+        experience: "Tanuj has professional hands-on industry experience building AI systems:\n\n1. **Saral One** (AI Automation & Chatbot Intern | May 2026 - Present):\nBuilding a WhatsApp AI Lead Qualification System to automate engagement workflows. Developing conversational logic to capture, score, and route leads.\n\n2. **Metry AI** (AI Developer Intern | Dec 2025 - Mar 2026):\nDesigned appointment booking chatbots for salon and beauty SMBs using FastAPI and LangGraph. Built structured multi-step state management flows.",
+        availability: "Tanuj is currently a third-year CS student and is actively looking for:\n\n• **AI Engineering Internships** (Fall 2026/Winter 2027)\n• **Freelance Projects** (AI Agent design, automation pipelines, APIs)\n• **Collaboration** on open-source AI projects.\n\n📧 worktanujrajput@gmail.com",
+        default: "That's an interesting question! While I'm just a twin simulator, Tanuj can answer that in detail. You can shoot him an email at **worktanujrajput@gmail.com** or connect on LinkedIn!"
     };
     
     // Simulate Typing & Response
@@ -348,9 +349,11 @@ const initAIAssistant = () => {
             let responseText = responses.default;
             if (cleanedInput.includes('skill') || cleanedInput.includes('tech') || cleanedInput.includes('stack')) {
                 responseText = responses.skills;
+            } else if (cleanedInput.includes('experience') || cleanedInput.includes('job') || cleanedInput.includes('intern') || cleanedInput.includes('metry') || cleanedInput.includes('saral')) {
+                responseText = responses.experience;
             } else if (cleanedInput.includes('project') || cleanedInput.includes('work') || cleanedInput.includes('build')) {
                 responseText = responses.projects;
-            } else if (cleanedInput.includes('job') || cleanedInput.includes('intern') || cleanedInput.includes('avail') || cleanedInput.includes('contact') || cleanedInput.includes('hire')) {
+            } else if (cleanedInput.includes('avail') || cleanedInput.includes('contact') || cleanedInput.includes('hire')) {
                 responseText = responses.availability;
             } else if (cleanedInput.includes('hello') || cleanedInput.includes('hi') || cleanedInput.includes('hey')) {
                 responseText = responses.greeting;

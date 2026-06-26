@@ -727,6 +727,152 @@ body[data-theme="light"] .btn-primary:hover {
     color: var(--accent-purple);
 }
 
+/* --- Experience Section --- */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    padding: 32px;
+}
+
+.experience-header-layout {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.experience-company-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo-saral {
+    background-color: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.logo-inner-s {
+    border-top: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
+    transform: rotate(45deg);
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+    margin-top: 3px;
+}
+
+body[data-theme="light"] .logo-saral {
+    background-color: #fafafa;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+body[data-theme="light"] .logo-inner-s {
+    border-top: 3px solid #09090b;
+    border-right: 3px solid #09090b;
+}
+
+.logo-metry {
+    background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+}
+
+.logo-inner-m {
+    border-left: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
+    border-top: 3px solid #ffffff;
+    border-radius: 2px 2px 0 0;
+    width: 14px;
+    height: 14px;
+    position: relative;
+}
+
+.logo-inner-m::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.experience-meta {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.experience-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.experience-role {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.experience-duration {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent-purple);
+}
+
+.experience-row-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 6px;
+    font-size: 0.9rem;
+}
+
+.experience-company {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.experience-location {
+    color: var(--text-secondary);
+}
+
+.experience-bullets {
+    margin-top: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.experience-bullets li {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.experience-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+}
+
 /* --- Skills Section --- */
 .skills-grid {
     display: grid;
@@ -1543,6 +1689,23 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .experience-header-layout {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .experience-row {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .experience-row-sub {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
     .hero-heading {
         font-size: 2.8rem;
     }
